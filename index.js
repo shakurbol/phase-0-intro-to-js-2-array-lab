@@ -1,62 +1,17 @@
-// Write your solution here!
-
-
-
-const cats = ["Milo", "Otis", "Garfield"];
-
-
-function destructivelyAppendCat(name) {
-  cats.push(name);
+var customerName;
+function upperCaseCustomerName() {
+  if (customerName) {
+    customerName = customerName.toUpperCase();
+  }
 }
-
-
-function destructivelyPrependCat(name) {
-  cats.unshift(name);
+function setBestCustomer() {
+  bestCustomer = 'not bob';
 }
-
-
-function destructivelyRemoveLastCat() {
-  cats.pop();
+function overwriteBestCustomer() {
+  bestCustomer = 'new best customer';
 }
+const leastFavoriteCustomer = 'someone';
 
-
-function destructivelyRemoveFirstCat() {
-  cats.shift();
+function changeLeastFavoriteCustomer() {
+  leastFavoriteCustomer = 'new least favorite customer'; 
 }
-
-
-function appendCat(name) {
-  const newArray = [...cats, name];
-  return newArray;
-}
-
-/
-function prependCat(name) {
-  const newArray = [name, ...cats];
-  return newArray;
-}
-
-
-function removeLastCat() {
-  const newArray = cats.slice(0, -1);
-  return newArray;
-}
-
-
-function removeFirstCat() {
-  const newArray = cats.slice(1);
-  return newArray;
-}
-
-
-module.exports = {
-  cats,
-  destructivelyAppendCat,
-  destructivelyPrependCat,
-  destructivelyRemoveLastCat,
-  destructivelyRemoveFirstCat,
-  appendCat,
-  prependCat,
-  removeLastCat,
-  removeFirstCat,
-};
